@@ -40,19 +40,23 @@ button:disabled {
 
 /* Navigation link styles */
 nav a {
+/*
   padding: 5px 10px;
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
   background-color: #eee;
   border-radius: 4px;
+*/
 }
 nav a:visited, a:link {
   color: #607D8B;
 }
 nav a:hover {
+/*
   color: #039be5;
   background-color: #CFD8DC;
+*/
 }
 nav a.router-link-active {
   color: #039be5;
@@ -139,4 +143,12 @@ nav a.router-link-active {
 /* everywhere else */
 * { 
   font-family: Arial, Helvetica, sans-serif; 
+}
+
+.ng-valid[required] {
+    border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid {
+    border-left: 5px solid #a94442; /* red */
 }

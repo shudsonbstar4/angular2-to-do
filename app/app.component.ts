@@ -1,7 +1,15 @@
 import {Component} from '@angular/core';
+import { ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+
+@Routes([
+    { path: '/', component: HomeComponent }
+    //{ path: '/home', name: 'Home', component: HomeComponent }
+])
 
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    templateUrl: './app/templates/main.html',
+    directives: [ROUTER_DIRECTIVES]
 })
 export class AppComponent { }

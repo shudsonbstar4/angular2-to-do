@@ -1,0 +1,7 @@
+{"data": [
+    { "id": 1, "name": "Wash Dishes", "completed": false },
+    { "id": 2, "name": "Dust furniture", "completed": false },
+    { "id": 3, "name": "Take out trash", "completed": false }
+], 
+"status": "200"
+}
