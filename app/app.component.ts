@@ -4,7 +4,6 @@ import { HomeComponent } from './components/home/home.component';
 
 @Routes([
     { path: '/', component: HomeComponent }
-    //{ path: '/home', name: 'Home', component: HomeComponent }
 ])
 
 @Component({
