@@ -28,15 +28,6 @@ export class TaskService {
             .catch(this.handleError);
     }
     
-    addTask (name: string): Observable<Task> {
-        let body = JSON.stringify({ name }); //The post body has to be a string, despite the content type being explicitly declared
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
-        
-        return this.http.post(this.tasksUrl, body, options)
-                        .map(this.extractData)
-                        .catch(this.handleError);
-    }
     
     private extractData(res:Response) { //NOTE: We want to abstract away what the server is doing, so this function should get the array of objects itself -- not the HTTP server response. We don't want our components to know about the response -- just the data. That's the whole point of a service -- to handle the response and make it usable to our components
         if (res.status < 200 || res.status >= 300) {

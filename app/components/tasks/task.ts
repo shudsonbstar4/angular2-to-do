@@ -10,15 +10,14 @@ export class Task { //This is the "model" for our Task obj. TS lets us declare t
         public loading: Boolean
     ) {  } //by using public, we don't have to write it like:
     
-    /*
-        http: Http;
-        
-        constructor(http: Http) {
-            this.http = http;
-        }
-    */
-    
-    
+
+//    http: Http;
+//
+//    constructor(http: Http) {
+//        this.http = http;
+//    }
+//    
+//    
 //    getTasks() {
 //        this.loading = true;
 //        return this.http.request('../seed-data/mock-tasks.json')
