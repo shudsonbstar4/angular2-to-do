@@ -47,11 +47,11 @@ export class HomeComponent implements OnInit {
             );
     }
     
-    taskAdded(task: Object) {
+    taskAdded(task: any) {
         this.tasks.push(task);
     }
     
-    deleteTask(taskId) {
+    deleteTask(taskId: any) {
         let i = 0;
         let tasksLength = this.tasks.length;
         

@@ -19,7 +19,7 @@ export class TaskFormComponent {
     //End hardcoded
         
     
-    task = new Task("4", "New Task", false);
+    task = {"id": "4", "name": "New Task", "completed": false};
     submitted = false;
     active = true;
     
