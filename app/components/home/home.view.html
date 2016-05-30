@@ -15,23 +15,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let task of tasks; let i = index">
-            <td>
-                <label>
-                    <span class="sr-only">Select task {{ task.name }}</span>
-                    <input type="checkbox">
-                </label>
-            </td>
-            <td>{{ task.id }}</td>
-            <td>{{ task.name }}</td>
-            <td>
-                <button class="btn btn-sm btn-info">Edit</button>
-                <button class="btn btn-sm btn-danger" (click)="deleteTask(task.id)">Delete</button>
-            </td>
+        <tr>
+            <td></td>
         </tr>
     </tbody>
 </table>
-
-<hr>
-
-<task-form (taskAdded)="taskAdded($event)"></task-form>
