@@ -4,23 +4,12 @@ import { Http, Response, RequestOptions } from '@angular/http';
 import { Task } from './task';
 import { Observable } from 'rxjs/Observable';
 import './../../helpers/rxjs-operators';
-/*
-
-    Here, we used a barrel file to include all the relevant Observable operators, and we're including it here
-    
-    We could also use:
-    
-    import { Observable } from 'rxjs/Rx'
-    
-    to get all of the Observable operators, since .map isn't included in the Observable class by default, but that would cause us to pay a penalty in load time. According to the Angular official documentation, we should add on the operators we need
-    
-*/
 
 @Injectable()
 export class TaskService {
-    constructor (private http: Http) {} //injects HTTP and assigns to the constructor; note that we have to include HTTP_PROVIDERS in the bootstrap in order to be able to use DI
+    constructor (private http: Http) {}
     
-    private tasksUrl = '../app/components/seed-data/mock-tasks.json'; //URL to the web API
+    private tasksUrl = '../app/components/seed-data/mock-tasks.json';
     
     getTasks (): Observable<Task[]> {
         return this.http.get(this.tasksUrl)
@@ -29,17 +18,16 @@ export class TaskService {
     }
     
     
-    private extractData(res:Response) { //NOTE: We want to abstract away what the server is doing, so this function should get the array of objects itself -- not the HTTP server response. We don't want our components to know about the response -- just the data. That's the whole point of a service -- to handle the response and make it usable to our components
+    private extractData(res:Response) {
         if (res.status < 200 || res.status >= 300) {
             throw new Error('Response status: ' + res.status);
         }
         
-        let body = res.json(); //This will take our stringified JSON object and parse it into a JSON object that JS can use
+        let body = res.json();
         return body.data || { };
     }
     
     private handleError (error: any) {
-        //in a real world app, might use remote logging
         let errorMessage = error.message || 'Server error';
         console.error(errorMessage); //log to console
         return Observable.throw(errorMessage);
