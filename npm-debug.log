@@ -9,7 +9,7 @@
 6 silly lifecycle angular2-quickstart@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle angular2-quickstart@1.0.0~start: angular2-quickstart@1.0.0
 8 verbose lifecycle angular2-quickstart@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle angular2-quickstart@1.0.0~start: PATH: /Users/shudson/.nvm/versions/node/v4.3.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/shudson/Documents/dev/Practice/angular-2/angular-2-seed-to-do/node_modules/.bin:/Users/shudson/.nvm/versions/node/v4.3.0/bin:/Users/shudson/.nvm/versions/node/v4.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/shudson/bin:/Users/shudson/.rvm/bin
+9 verbose lifecycle angular2-quickstart@1.0.0~start: PATH: /Users/shudson/.nvm/versions/node/v4.3.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/shudson/Documents/dev/Practice/angular-2/angular-2-seed-to-do/node_modules/.bin:/Users/shudson/.nvm/versions/node/v4.3.0/bin:/Users/shudson/.rvm/gems/ruby-2.3.0/bin:/Users/shudson/.rvm/gems/ruby-2.3.0@global/bin:/Users/shudson/.rvm/rubies/ruby-2.3.0/bin:/Users/shudson/.nvm/versions/node/v4.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/shudson/bin:/Users/shudson/.rvm/bin
 10 verbose lifecycle angular2-quickstart@1.0.0~start: CWD: /Users/shudson/Documents/dev/Practice/angular-2/angular-2-seed-to-do
 11 silly lifecycle angular2-quickstart@1.0.0~start: Args: [ '-c', 'tsc && concurrently "tsc -w" "lite-server" ' ]
 12 silly lifecycle angular2-quickstart@1.0.0~start: Returned: code: 2  signal: null
