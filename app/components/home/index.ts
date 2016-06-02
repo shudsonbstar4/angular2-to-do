@@ -2,4 +2,3 @@
 
 export * from '../tasks/task';
 export * from '../tasks/task.service';
-export * from '../seed-data/mock-tasks';

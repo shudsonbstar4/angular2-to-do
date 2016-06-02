@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Task, TaskService } from './index'; //TASKS is an exported array of tasks based on the class Task, whereas Task is the class itself
 
+import { Task, TaskService } from './index';
 import { TaskFormComponent } from './../add-task/task-form.component';
 
 @Component({
@@ -11,32 +11,14 @@ import { TaskFormComponent } from './../add-task/task-form.component';
 
 export class HomeComponent implements OnInit {
     
-    constructor(private taskService: TaskService) { //Task Service is being INJECTED into the constructor so it's an instance of the TaskService
-        //this.task = task;
-        
-//        getTasks():void {
-//            this.loading = true;
-//            this.http.request('../seed-data/mock-tasks.json')
-//                .subscribe((res: Response) => {
-//                    this.data = res.json();
-//                    this.loading = false;
-//                });
-//        }
-        
-//        getTasks() {
-//            this.task.getTasks.then((tasks) => {
-//               this.tasks = tasks; 
-//            });
-//        }
-    }
+    constructor(private taskService: TaskService) { }
 
         errorMessage: string;
         tasks: Task[];
         mode = 'Observable'; //Can fall back to Promises, but we should use Observables due to 'streams'
     
     ngOnInit() {
-        this.getTasks(); //this is a best practice. It ensures that the tasks are called on creation of the component, but it's not calling the get method of the service in the component's constructor. Instead it uses the lifecycle hook to call this method when it instantiates the component. It makes it easier to test/debug this way
-        //This service will return an Observable of HTTP data
+        this.getTasks();
     }
     
     getTasks() {

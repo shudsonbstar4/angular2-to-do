@@ -1,12 +1,5 @@
 /*
     Barrel File for the RxJS Operators to include
-    
-    We could also use:
-    
-    import { Observable } from 'rxjs/Rx'
-    
-    to get all of the Observable operators, since .map isn't included in the Observable class by default, but that would cause us to pay a penalty in load time. According to the Angular official documentation, we should add on the operators we need
-    
 */
 
 // Statics

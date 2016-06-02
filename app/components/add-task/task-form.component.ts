@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgForm } from '@angular/common';
 import { Headers, RequestOptions } from '@angular/http';
 
-import { Task, TaskService } from './../home/index'; //TASKS is an exported array of tasks based on the class Task, whereas Task is the class itself
+import { Task, TaskService } from './../home/index';
 
 
 @Component({
@@ -12,11 +12,9 @@ import { Task, TaskService } from './../home/index'; //TASKS is an exported arra
         
 })
 
-export class TaskFormComponent {
-    //This is just for demo purposes and to show how to notify a parent component of a child component's actions    
+export class TaskFormComponent {   
     @Input() name: string;
     @Output() taskAdded = new EventEmitter<Object>(); 
-    //End hardcoded
         
     
     task = {"id": "4", "name": "New Task", "completed": false};
@@ -42,7 +40,6 @@ export class TaskFormComponent {
     }
 
     newTask() {
-//        this.task = new Task
         this.active = false; //Adding the active flag and using ngIf on the form means that we're removing it from the DOM and adding it back, so we reset the "pristine" state
         setTimeout(()=> this.active=true, 0);
     }
