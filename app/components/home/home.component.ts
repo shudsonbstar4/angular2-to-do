@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Task } from './../tasks/task';
+
 
 @Component({
     templateUrl: './app/components/home/home.view.html'
@@ -7,12 +9,13 @@ import { Component } from '@angular/core';
 
 export class HomeComponent {
     
-    constructor() {
-        
+    tasks: Task[];
+    
+    constructor() {  //pass the task model in   
         this.tasks = [
-            { 'id': 1, 'name': 'Wash Dishes', 'completed': false },
-            { 'id': 2, 'name': 'Dust furniture', 'completed': false },
-            { 'id': 3, 'name': 'Take out trash', 'completed': false }
+            new Task( 1, 'Wash Dishes', false),
+            new Task( 2, 'Dust furniture', false),
+            new Task( 3, 'Take out the trash', false)
         ];
         
     }
